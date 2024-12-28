@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Weather" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="b9R-kK-2fk">
+                                <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eQa-l7-JRR">
+                                <rect key="frame" x="16" y="814" width="398" height="52"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="gX5-EM-R90"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Узнать погоду">
+                                    <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="16"/>
+                                    <color key="baseForegroundColor" name="AccentColor"/>
+                                    <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="4AE-QD-7FP" kind="show" id="nuy-0y-AI9"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="Bek-Eo-XhN">
+                                <rect key="frame" x="16" y="262.66666666666663" width="398" height="406.66666666666663"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Добро пожаловать" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xdt-gd-gXd">
+                                        <rect key="frame" x="0.0" y="0.0" width="398" height="105.33333333333333"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="44"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                        <size key="shadowOffset" width="0.0" height="0.0"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="FHC-Zm-yYn">
+                                        <rect key="frame" x="0.0" y="119.33333333333334" width="398" height="287.33333333333326"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Узнайте температуру воздуха, нажав на кнопку внизу" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ETh-OJ-cRq">
+                                                <rect key="frame" x="0.0" y="0.0" width="398" height="57.333333333333336"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="24"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                                <size key="shadowOffset" width="0.0" height="0.0"/>
+                                            </label>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Icon" translatesAutoresizingMaskIntoConstraints="NO" id="fTb-H1-bT0">
+                                                <rect key="frame" x="0.0" y="107.33333333333331" width="398" height="180"/>
+                                            </imageView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="b9R-kK-2fk" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="8vO-Y7-eSf"/>
+                            <constraint firstItem="b9R-kK-2fk" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="BuK-hC-8zz"/>
+                            <constraint firstAttribute="bottom" secondItem="b9R-kK-2fk" secondAttribute="bottom" id="F2m-Kp-CqA"/>
+                            <constraint firstAttribute="trailing" secondItem="Bek-Eo-XhN" secondAttribute="trailing" constant="16" id="KPd-Ju-g3E"/>
+                            <constraint firstAttribute="trailing" secondItem="b9R-kK-2fk" secondAttribute="trailing" id="Lzi-fN-TdY"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="eQa-l7-JRR" secondAttribute="bottom" constant="32" id="NUo-Y9-8oi"/>
+                            <constraint firstItem="b9R-kK-2fk" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="T61-zc-OG6"/>
+                            <constraint firstItem="b9R-kK-2fk" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="U9D-PR-sO5"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="eQa-l7-JRR" secondAttribute="trailing" constant="16" id="Ubn-1E-ATJ"/>
+                            <constraint firstItem="Bek-Eo-XhN" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="VsU-jU-UCT"/>
+                            <constraint firstItem="b9R-kK-2fk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="c7w-lS-jdo"/>
+                            <constraint firstItem="eQa-l7-JRR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="iAY-Bg-rYa"/>
+                            <constraint firstItem="b9R-kK-2fk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="jyT-8D-Hy9"/>
+                            <constraint firstItem="b9R-kK-2fk" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="nJU-NJ-kFU"/>
+                            <constraint firstItem="Bek-Eo-XhN" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="smQ-wW-5Yv"/>
+                            <constraint firstItem="Bek-Eo-XhN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tWp-ti-u2E"/>
+                            <constraint firstAttribute="bottom" secondItem="b9R-kK-2fk" secondAttribute="bottom" id="wkO-TP-FqG"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="75.572519083969468" y="-2.1126760563380285"/>
+        </scene>
+        <!--Temperatureviewcontroller-->
+        <scene sceneID="NEY-YL-kdL">
+            <objects>
+                <viewController id="4AE-QD-7FP" customClass="Temperatureviewcontroller" customModule="Weather" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BZQ-8v-F5a">
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="922"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="TJJ-Pe-S5a" customClass="Temperatureveiwcontroller">
+                                <rect key="frame" x="0.0" y="0.0" width="430" height="922"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ISk-ZX-0mh">
+                                <rect key="frame" x="374" y="16" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="AX6-p2-vlZ"/>
+                                    <constraint firstAttribute="width" constant="40" id="R0E-4Q-Qdt"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="cancelIcon" title=""/>
+                                <connections>
+                                    <action selector="dismissbuttonpressed:" destination="4AE-QD-7FP" eventType="touchUpInside" id="B5b-5b-gnP"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="0lg-Ca-TCU">
+                                <rect key="frame" x="16" y="446.66666666666669" width="398" height="28.666666666666686"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Температура воздуха" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FnB-hZ-0Fz">
+                                        <rect key="frame" x="0.0" y="0.0" width="398" height="28.666666666666668"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="24"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                        <size key="shadowOffset" width="0.0" height="0.0"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HkT-qb-FhV">
+                                        <rect key="frame" x="0.0" y="28.666666666666629" width="398" height="0.0"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="100"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                        <size key="shadowOffset" width="0.0" height="0.0"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="MhW-c0-nZL"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="0lg-Ca-TCU" firstAttribute="leading" secondItem="MhW-c0-nZL" secondAttribute="leading" constant="16" id="4nv-gg-apY"/>
+                            <constraint firstItem="TJJ-Pe-S5a" firstAttribute="leading" secondItem="MhW-c0-nZL" secondAttribute="leading" id="6x8-Pm-UYA"/>
+                            <constraint firstItem="MhW-c0-nZL" firstAttribute="trailing" secondItem="0lg-Ca-TCU" secondAttribute="trailing" constant="16" id="7or-II-Soc"/>
+                            <constraint firstItem="0lg-Ca-TCU" firstAttribute="centerX" secondItem="BZQ-8v-F5a" secondAttribute="centerX" id="GVH-Oa-j7Z"/>
+                            <constraint firstItem="0lg-Ca-TCU" firstAttribute="centerY" secondItem="BZQ-8v-F5a" secondAttribute="centerY" id="Gqr-TF-30d"/>
+                            <constraint firstItem="ISk-ZX-0mh" firstAttribute="top" secondItem="MhW-c0-nZL" secondAttribute="top" constant="16" id="LWj-OX-nbd"/>
+                            <constraint firstItem="TJJ-Pe-S5a" firstAttribute="top" secondItem="MhW-c0-nZL" secondAttribute="top" id="RRH-vr-Uru"/>
+                            <constraint firstItem="TJJ-Pe-S5a" firstAttribute="trailing" secondItem="MhW-c0-nZL" secondAttribute="trailing" id="hNv-ZU-F8Q"/>
+                            <constraint firstItem="MhW-c0-nZL" firstAttribute="trailing" secondItem="ISk-ZX-0mh" secondAttribute="trailing" constant="16" id="jVt-DT-rUs"/>
+                            <constraint firstAttribute="bottom" secondItem="TJJ-Pe-S5a" secondAttribute="bottom" id="wXk-vD-KJg"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="S3b-2s-8Td"/>
+                    <connections>
+                        <outlet property="temperaturelabel" destination="HkT-qb-FhV" id="2VE-iE-6dP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ko0-z2-SVY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="759.5419847328244" y="-2.1126760563380285"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Background" width="414" height="895"/>
+        <image name="Icon" width="180" height="180"/>
+        <image name="cancelIcon" width="40" height="40"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
